@@ -37,7 +37,19 @@
                 return false;
             }
 
-            return true;
+			var password = document.forms["reg-form"]["password"].value;
+            if (password.length < "8") {
+                alert("La contraseña debe tener por lo menos 8 caracteres");
+                return false;
+            }
+			
+			var password = document.forms["reg-form"]["password"].value;
+			if(password.indexOf(' ')!=-1){
+				alert ("La contraseña no puede contener espacios en blanco");
+				return false;
+			}
+					
+			return true;
         }
     });
     </script>
